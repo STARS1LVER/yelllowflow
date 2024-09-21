@@ -1,0 +1,36 @@
+<main class="kenburns-top">
+    <div class="div-carta">
+        <div class="div-carta-content shadow-sm">
+            <h3 class="text-center">Para la chica más hermosa, preciosa, consentida <33</h3>
+            <button class="custom-btn text-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="verCarta()">Ver carta</button>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="cartaModal" [ngClass]="{'fade-in': isModalOpen, 'fade-out': !isModalOpen}" tabindex="-1" aria-hidden="true"
+         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal flex justify-center items-center">
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+            <div class="relative bg-white rounded-lg shadow">
+                <div class="p-6 text-center">
+                    <h3 class="mb-5 text-lg font-normal text-gray-500">
+                        <img src="images/carta.jpeg" alt="Carta">
+                    </h3>
+    
+                    <button (click)="toggleVerMas()" class="custom-btn text-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                        {{ mostrarImagen ? 'Ver menos' : 'Ver más' }}
+                    </button>
+    
+                    <!-- Imagen adicional -->
+                    @if(mostrarImagen){
+                        <img  src="images/cupon.png" alt="Imagen adicional" class="mt-4">
+    
+                    }
+                    <button class="custom-btn text-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="cerrarModal()">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>

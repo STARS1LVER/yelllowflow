@@ -1,0 +1,60 @@
+.custom-shape-divider-top-1726934424 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1726934424 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 85px;
+}
+
+.custom-shape-divider-top-1726934424 .shape-fill {
+    fill: #fff387;
+}
+
+
+.content-hijo{
+    min-height: 100%;
+    background-image: url('../../assets/images/fondo9.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-shape-divider-bottom-1726954638 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1726954638 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 78px;
+}
+
+.custom-shape-divider-bottom-1726954638 .shape-fill {
+    fill: #fff387;
+}
+
+@media (max-width: 768px) {
+    .content-hijo {
+        height: 100%;
+    }
+
+    .custom-shape-divider-bottom-1726954638{
+        display: none;
+    }
+}
+
